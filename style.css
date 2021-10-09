@@ -1,6 +1,5 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    background-image: url("bg-desktop.svg");
     background-color: hsl(257, 40%, 49%);
     color: white;
 }
@@ -11,42 +10,106 @@ h1, h2, h3 {
 
 .Community {
     display: grid;
-    grid-template-columns: auto auto;
-        
+    grid-template-columns: auto auto;   
+}
+
+button {
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    font-size: 90%;
+    border-radius: 25px;
+    border: none;
+    padding: 4% 25%;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+}
+
+.Icons {
+    font-size: 175%;
+    padding: 5% 0%;
+}
+
+#facebook:hover {
+    color: hsl(300, 69%, 71%);
+}
+
+#twitter:hover {
+    color: hsl(300, 69%, 71%);
+}
+
+#instagram:hover {
+    color: hsl(300, 69%, 71%);
+}
+
+footer > p {
+    color: #cdc4e3;
+    font-size: x-small;
 }
 
 
+@media screen
+and (min-width: 375px)
+and (max-width: 416px) {
+    body {
+        background-image: url("bg-mobile.svg");
+        background-repeat: no-repeat;
+    }
+    
+    .Community {
+        grid-template-columns: 300px;
+        padding: 10% 5% 20% 7%;
+        grid-row-gap: 5%;
+    }
+    
+    #mockup {
+        width: 100%;
+    }
+    
+    .Text-block {
+        text-align: center;
+    }
 
-/* ## Layout
+    footer {
+        text-align: center;
+    }
+}
 
-The designs were created to the following widths:
+@media screen
+and (min-width: 1300px) {
+    body {
+        background-image: url("bg-desktop.svg");
+    }
 
-- Mobile: 375px
-- Desktop: 1440px
+    header {
+        padding: 2% 0% 0% 5%;
+        font-size: larger;
+    }
 
-## Colors
+    .Community {
+        padding: 3% 4% 0% 5%;
+        grid-column-gap: 5%;
+    }
 
-### Primary
+    div > h1 {
+        font-size: 250%;
+    }  
+    
+    button {
+        padding: 4% 15%;
+        font-size: 100%;
+    }
 
-- Violet: hsl(257, 40%, 49%)
-- Soft Magenta: hsl(300, 69%, 71%)
-
-## Typography
-
-### Headings
-
-- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
-- Weights: 400, 600
-
-### Body
-
-- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
-- Weights: 400
-
-## Icons
-
-For the social icons, you can use a font icon library. Some suggestions can be found below:
-
-- [Font Awesome](https://fontawesome.com/)
-- [IcoMoon](https://icomoon.io/)
-- [Ionicons](https://ionicons.com/) */
+    footer {
+        float: right;
+        padding-right: 5%;
+    }
+    .Icons {
+        padding: 3% 0% 0% 0%;
+        font-size: 200%;
+        word-spacing: 5px;
+    }
+}
