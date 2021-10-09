@@ -52,7 +52,7 @@ footer > p {
 
 
 @media screen
-and (min-width: 375px)
+and (min-width: 320px)
 and (max-width: 416px) {
     body {
         background-image: url("bg-mobile.svg");
